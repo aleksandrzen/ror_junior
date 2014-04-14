@@ -782,7 +782,7 @@ Post.find(10).user
 ```
 Перед уничтожением пользователя обновим модель пользователя:
 ```
-dependent: :destroy
+has_many :posts, dependent: :destroy
 ```
 Уничтожить юзера с id=3 вместе со всеми его постами:
 ```ruby
